@@ -1,0 +1,18 @@
+<div class="time_off">
+  <!-- ... -->
+  <h6 class="grey-text">Floating Holidays</h6>
+  <div style="display: flex; align-items: center;">
+    <div class="progress" style="width: 100%;">
+      <div class="progress-bar progress-bar-primary" style="background-color:#0c2739" role="progressbar" aria-valuenow="{{c.data.timeTypes['Floating Holidays'].takenHours / (c.data.timeTypes['Floating Holidays'].takenHours + c.data.timeTypes['Floating Holidays'].plannedHours + c.data.timeTypes['Floating Holidays'].restUsedHours) * 100}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width: (c.data.timeTypes['Floating Holidays'].takenHours / (c.data.timeTypes['Floating Holidays'].takenHours + c.data.timeTypes['Floating Holidays'].plannedHours + c.data.timeTypes['Floating Holidays'].restUsedHours) * 100) + '%'}">
+      </div>
+      <div class="progress-bar progress-bar-success" style="background-color:#5ba33c" role="progressbar" aria-valuenow="{{c.data.timeTypes['Floating Holidays'].plannedHours / (c.data.timeTypes['Floating Holidays'].takenHours + c.data.timeTypes['Floating Holidays'].plannedHours + c.data.timeTypes['Floating Holidays'].restUsedHours) * 100}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width: (c.data.timeTypes['Floating Holidays'].plannedHours / (c.data.timeTypes['Floating Holidays'].takenHours + c.data.timeTypes['Floating Holidays'].plannedHours + c.data.timeTypes['Floating Holidays'].restUsedHours) * 100) + '%'}">
+      </div>
+      <div class="progress-bar progress-bar-grey" role="progressbar" aria-valuenow="{{c.data.timeTypes['Floating Holidays'].restUsedHours / (c.data.timeTypes['Floating Holidays'].takenHours + c.data.timeTypes['Floating Holidays'].plannedHours + c.data.timeTypes['Floating Holidays'].restUsedHours) * 100}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width: (c.data.timeTypes['Floating Holidays'].restUsedHours / (c.data.timeTypes['Floating Holidays'].takenHours + c.data.timeTypes['Floating Holidays'].plannedHours + c.data.timeTypes['Floating Holidays'].restUsedHours) * 100) + '%'}">
+      </div>
+    </div>
+    <div class="totals" style="padding-left: 10px;">
+      {{ c.data.timeTypes["Floating Holidays"].entitlementHours }} hrs
+    </div>
+  </div>
+  <!-- ... -->
+</div>

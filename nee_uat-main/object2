@@ -1,0 +1,71 @@
+"ET_TIMEOFF_DATA": {
+                "item": [
+                    {
+                        "ENTITLE_DAYS": "                        25.00",
+                        "ENTITLE_HOURS": "                       200.00",
+                        "PLANNED_DAYS": "                         0.00",
+                        "PLANNED_HOURS": "                         0.00",
+                        "REST_USED_DAYS": "                        25.00",
+                        "REST_USED_HOURS": "                       200.00",
+                        "TAKEN_DAYS": "                         0.00",
+                        "TAKEN_HRS": "                         0.00",
+                        "TIME_TYPE_TEXT": "Vacation-Current Year"
+                    },
+                    {
+                        "ENTITLE_DAYS": "                         5.00",
+                        "ENTITLE_HOURS": "                        40.00",
+                        "PLANNED_DAYS": "                         0.00",
+                        "PLANNED_HOURS": "                         0.00",
+                        "REST_USED_DAYS": "                         5.00",
+                        "REST_USED_HOURS": "                        40.00",
+                        "TAKEN_DAYS": "                         0.00",
+                        "TAKEN_HRS": "                         0.00",
+                        "TIME_TYPE_TEXT": "Vacation Carryover"
+                    },
+                    {
+                        "ENTITLE_DAYS": "                         7.00",
+                        "ENTITLE_HOURS": "                        56.00",
+                        "PLANNED_DAYS": "                         0.00",
+                        "PLANNED_HOURS": "                         0.00",
+                        "REST_USED_DAYS": "                         7.00",
+                        "REST_USED_HOURS": "                        56.00",
+                        "TAKEN_DAYS": "                         0.00",
+                        "TAKEN_HRS": "                         0.00",
+                        "TIME_TYPE_TEXT": "Sick/FamilyCare/Preventiv"
+                    },
+                    {
+                        "ENTITLE_DAYS": "                        26.00",
+                        "ENTITLE_HOURS": "                       208.00",
+                        "PLANNED_DAYS": "                         0.00",
+                        "PLANNED_HOURS": "                         0.00",
+                        "REST_USED_DAYS": "                        24.50",
+                        "REST_USED_HOURS": "                       196.00",
+                        "TAKEN_DAYS": "                         1.50",
+                        "TAKEN_HRS": "                        12.00",
+                        "TIME_TYPE_TEXT": "Sick Carryover"
+                    },
+                    {
+                        "ENTITLE_DAYS": "                         2.00",
+                        "ENTITLE_HOURS": "                        16.00",
+                        "PLANNED_DAYS": "                         0.00",
+                        "PLANNED_HOURS": "                         0.00",
+                        "REST_USED_DAYS": "                         2.00",
+                        "REST_USED_HOURS": "                        16.00",
+                        "TAKEN_DAYS": "                         0.00",
+                        "TAKEN_HRS": "                         0.00",
+                        "TIME_TYPE_TEXT": "Floating Holidays"
+                    },
+                    {
+                        "ENTITLE_DAYS": "                         7.00",
+                        "ENTITLE_HOURS": "                        56.00",
+                        "PLANNED_DAYS": "                         0.00",
+                        "PLANNED_HOURS": "                         0.00",
+                        "REST_USED_DAYS": "                         7.00",
+                        "REST_USED_HOURS": "                        56.00",
+                        "TAKEN_DAYS": "                         0.00",
+                        "TAKEN_HRS": "                         0.00",
+                        "TIME_TYPE_TEXT": "Sick/Fam/Prev Carryover"
+                    }
+                ]
+            }
+        }

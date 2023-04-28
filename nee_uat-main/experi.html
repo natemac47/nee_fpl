@@ -1,0 +1,50 @@
+<div class="time_off">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h1 class="panel-title title-spacing reduced-title">My Time Off</h1>
+      
+      <div ng-repeat="timeType in c.data.timeTypes | filter:{key: 'Vacation'}">
+        <h6 class="grey-text">{{timeType.key}}</h6>
+        <div style="display: flex; align-items: center;">
+          <div class="progress" style="width: 100%;">
+            <div class="progress-bar progress-bar-primary" style="background-color:#0c2739" role="progressbar" aria-valuenow="{{timeType.value.takenPercentage}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width: (timeType.value.takenPercentage || .1) + '%'}">
+            </div>
+            <div class="progress-bar progress-bar-success" style="background-color:#5ba33c" role="progressbar" aria-valuenow="{{timeType.value.plannedPercentage}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width: (timeType.value.plannedPercentage || .1) + '%'}">
+            </div>
+            <div class="progress-bar progress-bar-grey" role="progressbar" aria-valuenow="{{timeType.value.totalPercentage}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width: timeType.value.totalPercentage + '%'}">
+            </div>
+          </div>
+          <div class="totals" style="padding-left: 10px;">
+            {{ timeType.value.restUsedHours }} hrs
+          </div>
+        </div>
+      </div>
+      <h6 class="grey-text">Floating Holidays</h6>
+      <div style="display: flex; align-items: center;">
+        <div class="progress" style="width: 100%;">
+      <div class="progress-bar progress-bar-primary" style="background-color:#0c2739" role="progressbar" aria-valuenow="{{c.data.timeTypes['Floating Holidays'].takenPercentage}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width: (c.data.timeTypes['Floating Holidays'].takenPercentage || .1) + '%'}">
+          </div>
+          <div class="progress-bar progress-bar-success" style="background-color:#5ba33c" role="progressbar" aria-valuenow="{{c.data.timeTypes['Floating Holidays'].plannedPercentage}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width: (c.data.timeTypes['Floating Holidays'].plannedPercentage || .1) + '%'}">
+          </div>
+          <div class="progress-bar progress-bar-grey" role="progressbar" aria-valuenow="{{c.data.timeTypes['Floating Holidays'].totalPercentage}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width: c.data.timeTypes['Floating Holidays'].totalPercentage + '%'}">
+          </div>
+        </div>
+        <div class="totals" style="padding-left: 10px;">
+          {{ c.data.timeTypes["Floating Holidays"].restUsedHours }} hrs
+        </div>
+      </div>
+      <div class="circle-legend">
+        <span class="circle-text">
+          <i class="fa fa-circle" style="color: #0c2739;"></i> Used
+        </span>
+        <span class="circle-text">
+          <i class="fa fa-circle" style="color: #5cb85c;"></i> Planned
+        </span>
+        <span class="circle-text">
+          <i class="fa fa-circle" style="color: #DEDEDE;"></i> Remaining
+        </span>
+</div>
+        <div class="col-md-12">
+            <a href="{{options.url}}" target="_blank" class="url-link font-weight-bold text-uppercase bottom-left-link">{{options.urlText}}</a>
+        </div>
+        </div>

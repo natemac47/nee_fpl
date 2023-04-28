@@ -1,0 +1,54 @@
+{
+    "root": {
+        "n0_Z_HR_WS_GET_TIMEOFF_DATAResponse": {
+            "ET_TIMEOFF_DATA": {
+                "item": [
+                    {
+                        "ENTITLE_DAYS": "                        15.00",
+                        "ENTITLE_HOURS": "                       120.00",
+                        "PLANNED_DAYS": "                         0.00",
+                        "PLANNED_HOURS": "                         0.00",
+                        "REST_USED_DAYS": "                        10.25",
+                        "REST_USED_HOURS": "                        82.00",
+                        "TAKEN_DAYS": "                         4.75",
+                        "TAKEN_HRS": "                        38.00",
+                        "TIME_TYPE_TEXT": "Vacation-Current Year"
+                    },
+                    {
+                        "ENTITLE_DAYS": "                         7.00",
+                        "ENTITLE_HOURS": "                        56.00",
+                        "PLANNED_DAYS": "                         0.00",
+                        "PLANNED_HOURS": "                         0.00",
+                        "REST_USED_DAYS": "                         4.81",
+                        "REST_USED_HOURS": "                        38.50",
+                        "TAKEN_DAYS": "                         2.19",
+                        "TAKEN_HRS": "                        17.50",
+                        "TIME_TYPE_TEXT": "Sick/FamilyCare/Preventiv"
+                    },
+                    {
+                        "ENTITLE_DAYS": "                         4.00",
+                        "ENTITLE_HOURS": "                        32.00",
+                        "PLANNED_DAYS": "                         0.00",
+                        "PLANNED_HOURS": "                         0.00",
+                        "REST_USED_DAYS": "                         4.00",
+                        "REST_USED_HOURS": "                        32.00",
+                        "TAKEN_DAYS": "                         0.00",
+                        "TAKEN_HRS": "                         0.00",
+                        "TIME_TYPE_TEXT": "Floating Holidays"
+                    },
+                    {
+                        "ENTITLE_DAYS": "                         5.00",
+                        "ENTITLE_HOURS": "                        40.00",
+                        "PLANNED_DAYS": "                         0.00",
+                        "PLANNED_HOURS": "                         0.00",
+                        "REST_USED_DAYS": "                         5.00",
+                        "REST_USED_HOURS": "                        40.00",
+                        "TAKEN_DAYS": "                         0.00",
+                        "TAKEN_HRS": "                         0.00",
+                        "TIME_TYPE_TEXT": "Vacation Buy-40 Hrs"
+                    }
+                ]
+            }
+        }
+    }
+}
