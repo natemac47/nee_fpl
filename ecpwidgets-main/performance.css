@@ -1,0 +1,79 @@
+.modular-widget {
+    border: 0px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: relative;
+    height: 250px; /* Increase the height to make the widget a square */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title-row,
+.description-row,
+.url-row {
+    width: 100%;
+}
+
+.short-description {
+  	margin-top: 10px;
+  	display: block;
+  	font-size: 18px;
+  	font-weight: 700;
+    color: #000000;
+}
+
+.description-container {
+    height: 35px;
+  	margin-bottom: 80px;
+    overflow-y: hidden;
+}
+
+.description {
+    font-size: 0.8em;
+    color: #6c757d;
+}
+
+.icon-container {
+    position: absolute;
+    top: 5px; 
+    right: 5px;
+}
+
+.icon-container i {
+    font-size: 2em;
+}
+
+.url-link {
+    color: #0073a8;
+    text-decoration: none;
+  	font-size: 16px
+}
+
+.url-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.perftask {
+  font-size: 22px;
+  font-weight: 400;
+  position: absolute;
+  top: -90px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  /*white-space: nowrap;*/
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 90%
+}
+
+.perftaskdescription {
+  font-size: 0.8em;
+  color: #6c757d;
+  position: absolute;
+  top: -10px;  
+}
+  

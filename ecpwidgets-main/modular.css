@@ -1,0 +1,54 @@
+.modular-widget {
+    border: 0px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    position: relative;
+    height: 250px; /* Increase the height to make the widget a square */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title-row,
+.description-row,
+.url-row {
+    width: 100%;
+}
+
+.short-description {
+    margin-bottom: 5px;
+    color: #000000;
+}
+
+.description-container {
+    height: 150px; /* Adjust this value according to your requirements */
+    overflow-y: hidden;
+}
+
+.description {
+    margin-bottom: 15px;
+    font-size: 0.8em;
+    color: #6c757d;
+}
+
+.icon-container {
+    position: absolute;
+    top: 5px; /* Adjust the position of the icon */
+    right: 5px; /* Adjust the position of the icon */
+}
+
+.icon-container i {
+    font-size: 2em; /* Decrease the icon size */
+}
+
+.url-link {
+    color: #0073a8;
+    text-decoration: none;
+  	font-size: 16px
+}
+
+.url-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

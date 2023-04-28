@@ -1,0 +1,25 @@
+<!-- Modal template -->
+<script type="text/ng-template" id="holidaysModal.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Holidays Grouping</h3>
+    </div>
+    <div class="modal-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Holiday Name</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="holiday in data.holidays"> <!-- Change this line -->
+                    <td>{{::holiday.name}}</td>
+                    <td>{{::holiday.date | date:'MMMM d'}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-default" type="button" ng-click="c.closeHolidaysModal()">Close</button>
+    </div>
+</script>

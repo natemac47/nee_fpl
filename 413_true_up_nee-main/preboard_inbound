@@ -1,0 +1,22 @@
+(function executeRule(current, event) {
+    // Get the hiring_manager_id from the email
+    var hiringManagerId = event.parm2;
+
+    if (hiringManagerId) {
+        // Query the sys_user table to find the user with the corresponding u_personnel_number
+        var user = new GlideRecord('sys_user');
+        user.addQuery('u_personnel_number', hiringManagerId);
+        user.query();
+
+        // If a matching user is found, set the 'Opened For' field to that user's sys_id
+        if (user.next()) {
+            current.opened_for = user.sys_id;
+            current.update();
+            gs.info('Inbound Action: Opened For field set to sys_user with u_personnel_number: ' + hiringManagerId);
+        } else {
+            gs.warn('Inbound Action: No sys_user found with u_personnel_number: ' + hiringManagerId);
+        }
+    } else {
+        gs.warn('Inbound Action: No hiring_manager_id provided in the email');
+    }
+})(current, event);

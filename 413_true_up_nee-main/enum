@@ -1,0 +1,15 @@
+   var previousIndex = $(e.relatedTarget).siblings('.active').attr('data-idx');
+    var previousItem = c.data.items[previousIndex];
+    var previousElId = 'video_' + previousIndex + '_' + c.data.spInstanceId;
+
+    if (previousItem.video_source === 'youtube') {
+        if (previousElId in youtubePlayers && youtubePlayers[previousElId] && youtubePlayers[previousElId].pauseVideo) {
+            youtubePlayers[previousElId].pauseVideo();
+        }
+    } else {
+        pauseVideo(previousElId);
+    }
+
+    // ...
+    // (The rest of the event handler code)
+    // ...
