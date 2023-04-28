@@ -1,0 +1,56 @@
+<div class="modular-widget" sn-widget="HolidayWidgetController">
+    <div class="row title-row">
+        <div class="col-md-8">
+            <div class="short-description">Holiday Calendar</div>
+        </div>
+        <div class="col-md-4 text-right icon-container">
+            <img src="{{::options.icon}}">
+        </div>
+    </div>
+    <div class="row description-row">
+        <div class="col-md-12">
+            <div class="description-container">
+                <p class="description">The next upcoming company holiday is:</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+          <div class="date">{{data.holiday.date}} 
+          </div>
+            <div class="holiday">{{data.holiday.name}}
+          </div>
+        </div>
+    </div>
+<div class="row url-row">
+    <div class="col-md-12">
+        <a href="" ng-click="c.openHolidaysModal()" class="url-link font-weight-bold text-uppercase">View Holiday Calendar</a>
+    </div>
+</div>
+
+<!-- Modal template -->
+<script type="text/ng-template" id="holidaysModal.html">
+  <div class="modal-header">
+    <h3 class="modal-title">Holidays</h3>
+  </div>
+  <div class="modal-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Holiday Name</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="holiday in holidays">
+          <td>{{holiday.name}}</td>
+          <td>{{holiday.date}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-default" type="button" ng-click="closeHolidaysModal()">Close</button>
+  </div>
+</script>
+</div>

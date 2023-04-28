@@ -1,0 +1,86 @@
+.panel.panel-default {
+    border: none;
+}
+
+.panel-body {
+    min-height: 250px; 
+}
+
+.title-spacing {
+		margin-bottom: 10px;
+}
+.reduced-title {
+		font-size: 18px;
+		margin-top: 8px;
+  	font-weight: 100;
+}
+
+.progress {
+		height: 12px;
+  	border-radius: 10px
+}
+.progress-bar {
+		line-height: 12px;
+		font-size: 14px;
+}
+.bottom-left-link {
+		position: absolute;
+		bottom: -28px;
+		left: -8px;
+}
+
+.circle-legend {
+    display: flex;
+    justify-content: center;
+}
+
+.circle-text {
+    font-size: 0.7em;
+    margin-right: 10px;
+}
+
+.circle-text:last-child {
+    margin-right: 0;
+}
+
+.view-time-off-link {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.view-time-off-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.view-time-off-link a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.url-row {
+    margin-top: 16px;
+    text-align: left; 
+}
+
+.url-link {
+    color: #0073a8;
+    text-decoration: none;
+    font-size: 16px; 
+    text-align: left;
+}
+
+.url-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+.grey-text {
+		color: #999;
+}
+
+.totals {
+  font-size: 12px;
+  white-space: nowrap;
+	padding-bottom: 20px;  
+}
