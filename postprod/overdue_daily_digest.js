@@ -1,4 +1,4 @@
-(function() {
+(function executeRule(current) {
 
     // Get today's date and set the time to 00:00:00
     var today = new GlideDateTime();
@@ -6,10 +6,10 @@
 
     // Build GlideRecord query for sn_hr_core_task table
     var hrTaskGR = new GlideRecord('sn_hr_core_task');
-    hrTaskGR.addEncodedQuery("due_date<=javascript:gs.endOfToday()^hr_service=4c5f019b0b6c6110e7d206c842f8df83^ORhr_service=007670d30ba86110e7d206c842f8df61^stateIN10,18");
+	hrTaskGR.addEncodedQuery("due_date<=javascript:gs.endOfToday()^hr_service=4c5f019b0b6c6110e7d206c842f8df83^ORhr_service=007670d30ba86110e7d206c842f8df61^stateIN10,18");
     hrTaskGR.query();
 
-    // Create a map to store users and their respective overdue tasks
+	// Create a map to store users and their respective overdue tasks
     var userTaskMap = {};
 
     while (hrTaskGR.next()) {
@@ -32,7 +32,8 @@
             });
         }
     }
-
+	gs.log('Nate ' + hrTaskGR);
+	gs.log('Nate 2' + userTaskMap);
     // Send email notifications to users with overdue tasks
     for (var user in userTaskMap) {
         var recipient = new GlideRecord('sys_user');
@@ -51,11 +52,11 @@
             emailBody += '</ul><br/>Please complete these tasks as soon as possible.<br/><br/>Thank you!';
 
             // Send the email
-            var email = new GlideNotification();
+            var email = new GlideEmail();
             email.setSubject('Overdue HR Tasks Notification');
             email.setBody(emailBody);
-            email.setFrom('noreply@example.com');
-            email.setReplyTo('hr@example.com');
+            email.setFrom('neesnsysdev@service-now.com');
+            email.setReplyTo('neesnsysdev@service-now.com');
             email.addTo(userEmail);
             email.send();
         }
