@@ -51,7 +51,7 @@
             emailBody += '</ul><br/>Please complete these tasks as soon as possible.<br/><br/>Thank you!';
 
             // Send the email
-            gs.eventQueue('custom.overdue.hr.tasks', hrTaskGR, userEmail, emailBody);
+            gs.eventQueue('custom.overdue.hr.tasks', recipient, userEmail, emailBody);
         }
     }
 
