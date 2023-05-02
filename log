@@ -1,0 +1,11 @@
+Javascript compiler exception: JavaAdapter requires at least one argument. (null.null.script; line 55) in:
+(function executeRule(current) {
+
+    // Get today's date and set the time to 00:00:00
+    var today = new GlideDateTime();
+    today.setDisplayValue(today.getDisplayValue().split(' ')[0] + ' 00:00:00');
+
+    // Build GlideRecord query for sn_hr_core_task table
+    var hrTaskGR = new GlideRecord('sn_hr_core_task');
+	hrTaskGR.addEncodedQuery("due_date<=javascript:gs.endOfToday()^hr_service=4c5f019b0b6c6110e7d206c842f8df83^ORhr_service=007670d30ba86110e7d206c842f8df61^stateIN10,18");
+    ...
