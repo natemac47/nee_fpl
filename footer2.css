@@ -2,46 +2,43 @@
   background-color: #0F3852;
 }
 
-.row {
-  margin: 0;
-}
-
-.logo-help {
+.panel-heading {
+  background-color: #0F3852;
+  margin-bottom: -3px;
+  font-size: 26px;
+  color: #ffffff;
+  text-decoration: none solid rgb(255, 255, 255);
+  text-align: center;
+  margin-top: 10px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  padding: 20px 0;
-}
-
-.title {
-  margin-left: 20px;
 }
 
 .sam {
   background-color: #0F3852;
 }
 
-.submitbtn {
+.request-contact {
+  font-size: 16px;
   color: #ffffff;
-  background-color: rgb(0, 115, 168);
-  font-size: 14px;
-  border-radius: 32px;
-  border-width: 1px;
-  border-color: rgb(0, 115, 168);
-  border-style: solid;
-  padding: 12px 24px;
-  text-transform: uppercase;
-  margin-top: 11px;
+  margin-left: 14px;
 }
 
-.contact {
-  padding: 8px;
+.logo {
+  margin-left: 12px;
+  margin-bottom: 3.3rem;
+  top: 3.2rem;
+  position: relative;
+}
+
+.title {
+  margin-left: 7.2rem;
+  margin-top: 41px;
 }
 
 .post-thumb {
   display: flex;
   align-items: center;
-  margin-right: 14px;
 }
 
 .post-content {
@@ -49,7 +46,23 @@
   align-items: center;
 }
 
-.request-contact {
-  font-size: 16px;
+.submitbtn {
+  opacity: 1;
   color: #ffffff;
+  background-color: rgb(0, 115, 168);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  background-image: none;
+  background-position: center center;
+  background-repeat: repeat;
+  background-size: cover;
+  border-radius: 32px;
+  border-width: 1px;
+  border-color: rgb(0, 115, 168);
+  border-style: solid;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  margin-top: 11px;
 }
