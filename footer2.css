@@ -60,7 +60,13 @@ p {
 
 .post-thumb {
   display: flex;
-  align-content: flex-start;
+  align-items: center;
+}
+
+.post-content {
+  display: flex;
+  align-items: center;
+  margin-left: 14px;
 }
 
 .submitbtn {
