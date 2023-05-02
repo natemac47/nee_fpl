@@ -18,11 +18,20 @@
   background-color: #0F3852;
 }
 
+.headset-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.request-contact-wrapper {
+  margin-left: 14px;
+  width: 300px;
+}
+
 .request-contact {
   font-size: 16px;
-  color: #ffffff;
-  margin-left: 14px;
 }
+
 
 .logo {
   margin-left: 12px;
