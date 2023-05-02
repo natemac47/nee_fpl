@@ -1,0 +1,35 @@
+<!-- Modal template -->
+<script type="text/ng-template" id="holidaysModal.html">
+  <style>
+    .holiday-date-mobile {
+      display: block;
+    }
+    @media (max-width: 767px) {
+      .modal-body tr td:nth-child(2) {
+        display: block;
+      }
+    }
+  </style>
+  <div class="modal-header">
+    <h3 class="modal-title">Holidays</h3>
+  </div>
+  <div class="modal-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Holiday Name</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="holiday in holidays">
+          <td>{{holiday.name}}</td>
+          <td>{{holiday.date}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-default" type="button" ng-click="closeHolidaysModal()">Close</button>
+  </div>
+</script>
