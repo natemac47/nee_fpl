@@ -5,16 +5,26 @@
   }
 
   .widget-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
-    text-align: center;
     padding: 1rem 0;
   }
 
   .widget-content * {
     font-size: 3vw !important;
     line-height: 1.2 !important;
+  }
+
+  .widget-content h2 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
   }
 
   .widget-content p {
