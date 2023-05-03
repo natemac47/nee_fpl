@@ -1,0 +1,24 @@
+@media (max-width: 767px) {
+  .widget-content-experience {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .widget-content {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+  }
+
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .dots ul {
+    display: inline-block;
+    padding-left: 0;
+  }
+}
