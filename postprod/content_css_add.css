@@ -8,7 +8,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
@@ -36,6 +35,11 @@
     -webkit-box-orient: vertical;
     max-height: calc(1.2em * 4);
     margin: 0;
+  }
+
+  .cd-banner .banner-container img {
+    width: 100%;
+    height: auto;
   }
 
   .dots {
