@@ -1,0 +1,61 @@
+<section class="widget-content-experience" ng-class="{ 'widget-content-experience-mobile': data.isMobileApp, 'container-offset': c.isBanner(), 'show-heading': c.data.displayHeadingText, 'show-bounding-box': c.data.displayBoundingBox, 'show-background': c.data.showBackground }">
+	<sp-panel rect="rect" ng-if="c.data.items.length">
+		<div class="widget-container" ng-class="{'carousel-layout' : c.forceDots}" ng-if="c.data.items.length > 0" ng-style="c.activeItem.type==='block' && !c.activeItem.text_over_background? c.checkForDefectiveBanner() : c.getExpandedBackground()" ng-swipe-left="c.data.items.length > 1 && data.isMobileApp ? c.scrollDown() : ''" ng-swipe-right="c.data.items.length > 1 && data.isMobileApp ? c.scrollUp() : ''">
+      			<div
+				class="widget-content"
+				ng-class="[c.getGradient(), {mobile: c.data.items.length >= 1 && c.forceDots}, {'preview-outline preview-info-container-parent': c.activeItem.is_preview && c.activeItem.is_content_active === '1'}, {'preview-outline-inactive preview-info-container-parent': c.activeItem.is_preview && c.activeItem.is_content_active === '0'}]"
+				ng-style="c.getStyle()" ng-switch="c.activeItem.content_type"             
+			>
+				<portal-content-preview-info-tab is-compact="false" item="c.activeItem" index="1">
+				</portal-content-preview-info-tab>
+				<cd-banner ng-switch-when="a673597a0b4303008cd6e7ae37673a6f" banner-item="c.activeItem" index="1" is-content-preview="c.data.isContentPreview" disabled-tooltip="c.data.disabledTooltip" has-expanded-background="c.data.expandBkgdImage" ></cd-banner>
+				<cd-styled-content ng-switch-when="41040dd7237e2300fb0c949e27bf652a" styled-content-item="c.activeItem" index="1" 
+                                     is-content-preview="c.data.isContentPreview" 
+                                     disabled-tooltip="c.data.disabledTooltip"  
+                                     has-expanded-background="c.data.expandBkgdImage"
+                                     active-item="c.activeItem">
+				</cd-styled-content>
+				<button class="pause-toggle btn btn-primary" ng-click="c.togglePause()" ng-if="c.data.items.length > 1 && !data.isMobileApp" aria-label="{{c.paused ? 'Play' : 'Pause'}}">
+						<div class="pause-background"></div>
+						<span class="fa fa-pause-circle-o" role="button" ng-if="!c.paused" uib-tooltip="{{c.i18n.getMessage('pause_carousel')}}" aria-label="{{c.i18n.getMessage('pause_carousel')}}"></span>
+						<span class="fa fa-play-circle-o" role="button" ng-if="c.paused" uib-tooltip="{{c.i18n.getMessage('play_carousel')}}" aria-label="{{c.i18n.getMessage('play_carousel')}}"></span>
+				</button>
+			</div>
+
+			<div class="list" ng-if="c.data.items.length > 1 && !c.forceDots">
+				<div class="hidden-status" aria-live="polite">Banner {{c.activeIndex + 1}} of {{c.data.items.length}}: {{c.activeItem.headline_text || c.activeItem.heading_text}}</div>
+				<ul class="list-unstyled">
+					<li ng-repeat="ceItem in c.data.items | limitTo : c.itemDisplayCount : c.startIndex" ng-class="{ active: c.activeItem.sys_id === ceItem.sys_id }" class="widget-content-experience-content-btn">
+						<button class="btn btn-primary" ng-click="c.clickItem($index + c.startIndex)" aria-label="{{c.data.messages.carouselButtonLabel + ' ' + $index}}">
+							<span class="{{'heading' + $index}}" uib-tooltip="{{ceItem.headline_text || ceItem.heading_text}}" tooltip-class="tooltip-overflow" tooltip-enable="c.tooltipEnabled('heading' + $index)" tooltip-append-to-body="true">{{ ::(ceItem.headline_text || ceItem.heading_text) }}</span>
+						</button>
+					</li>
+				</ul>
+				<div class="scroll-btns" ng-if="c.data.items.length > c.itemDisplayCount">
+					<button class="btn btn-primary" ng-click="c.scrollUp()" aria-label="${Scroll up}" uib-tooltip="{{c.i18n.getMessage('scroll_up')}}">
+						<span class="fa fa-chevron-up"></span>
+					</button>
+					<button class="btn btn-primary" ng-click="c.scrollDown()" aria-label="${Scroll down}" uib-tooltip="{{c.i18n.getMessage('scroll_down')}}">
+						<span class="fa fa-chevron-down"></span>
+					</button>
+				</div>
+			</div>
+			<button class="nav-arrow left-arrow btn" ng-click="c.scrollUp()" ng-if="c.data.items.length > 1 && c.forceDots && !data.isMobileApp" aria-label="${Previous item}">
+				<div class="arrow-background"></div>
+				<span class="fa fa-chevron-circle-left"></span>
+			</button>
+			<button class="nav-arrow right-arrow btn" ng-click="c.scrollDown()" ng-if="c.data.items.length > 1 && c.forceDots&& !data.isMobileApp" aria-label="${Next item}">
+				<div class="arrow-background"></div>
+				<span class="fa fa-chevron-circle-right"></span>
+			</button>
+			<div class="dots" ng-if="c.data.items.length > 1 && c.forceDots">
+				<ul class="list-unstyled">
+					<li ng-repeat="ceItem in c.data.items">
+						<button class="dot btn" ng-click="c.clickItem($index)" ng-class="{ active: c.activeItem.sys_id === ceItem.sys_id }" aria-label="{{ceItem.heading_text? ceItem.heading_text : 'Carousel dot' }}"></button>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="widget-container-spacing-mobile" ng-if="c.data.items.length > 1 && c.forceDots && data.isMobileApp"></div>
+	</sp-panel>
+</section>
