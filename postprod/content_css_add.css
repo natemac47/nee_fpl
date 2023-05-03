@@ -8,18 +8,23 @@
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
+    text-align: center;
   }
 
   .widget-content * {
-    font-size: 1rem !important;
-    line-height: 1.4 !important;
-    white-space: normal;
+    font-size: 3vw !important;
+    line-height: 1.2 !important;
+    white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-height: 3.6em;
+  }
+
+  .widget-content p {
+    white-space: normal;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+    max-height: calc(1.2em * 2);
   }
 
   .dots {
