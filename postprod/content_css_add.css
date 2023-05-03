@@ -7,12 +7,15 @@
   .widget-content {
     width: 100%;
     box-sizing: border-box;
-    overflow: auto;
+    overflow: hidden;
   }
 
   .widget-content * {
     font-size: 3vw !important;
     line-height: 1.2 !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .dots {
