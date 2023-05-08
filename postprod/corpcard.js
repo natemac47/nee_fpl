@@ -3,9 +3,9 @@
     // Trigger: State changes to complete and Metric Type is Corporate Cell Phone
     if (current.state == 'complete' && current.metric_type == 'corporate_cell_phone') {
 
-        // Gliderecord to asmt_metric_result table where assessment instance is the same as current
+        // Gliderecord to asmt_metric_result table where instance is the same as current
         var metricResultGR = new GlideRecord('asmt_metric_result');
-        metricResultGR.addQuery('assessment_instance', current.sys_id);
+        metricResultGR.addQuery('instance', current.sys_id);
         metricResultGR.query();
 
         while (metricResultGR.next()) {
@@ -18,15 +18,20 @@
             hrTaskGR.query();
 
             while (hrTaskGR.next()) {
-                // Looks up the HR Task's parent subject person's HR Profile (HR Profile table is sn_hr_core_profile)
-                var hrProfileGR = new GlideRecord('sn_hr_core_profile');
-                hrProfileGR.addQuery('subject_person', hrTaskGR.getValue('parent'));
-                hrProfileGR.query();
+                // Get HR Task's parent
+                var hrTaskParentGR = new GlideRecord('sn_hr_core_task');
+                hrTaskParentGR.get(hrTaskGR.getValue('parent'));
 
-                if (hrProfileGR.next()) {
-                    // Writes the actual_value to the u_corporate_card on the HR Profile
-                    hrProfileGR.setValue('u_corporate_card', actualValue);
-                    hrProfileGR.update();
+                if (hrTaskParentGR.isValid()) {
+                    // Get HR Profile from the HR Task's parent subject_person_hr_profile
+                    var hrProfileGR = new GlideRecord('sn_hr_core_profile');
+                    hrProfileGR.get(hrTaskParentGR.getValue('subject_person_hr_profile'));
+
+                    if (hrProfileGR.isValid()) {
+                        // Writes the actual_value to the u_corporate_card on the HR Profile
+                        hrProfileGR.setValue('u_corporate_card', actualValue);
+                        hrProfileGR.update();
+                    }
                 }
             }
         }
