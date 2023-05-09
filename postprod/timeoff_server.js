@@ -105,4 +105,30 @@
 
         return vacationTotals;
     }
+    
+    
+    function calculateFloatTotals(timeTypes) {
+        var floatTotals = {
+            plannedHours: 0,
+            takenHours: 0,
+            entitlementHours: 0,
+            plannedPercentage: 0,
+            takenPercentage: 0,
+            restUsedHours: 0
+        };
+
+        for (var key in timeTypes) {
+            if (key.includes("Float")) {
+                floatTotals.plannedHours += timeTypes[key].plannedHours;
+                floatTotals.takenHours += timeTypes[key].takenHours;
+                floatTotals.entitlementHours += timeTypes[key].entitlementHours;
+                floatTotals.restUsedHours += timeTypes[key].restUsedHours;
+            }
+        }
+
+        floatTotals.plannedPercentage = (floatTotals.plannedHours / floatTotals.entitlementHours) * 100;
+        floatTotals.takenPercentage = (floatTotals.takenHours / floatTotals.entitlementHours) * 100;
+
+        return floatTotals;
+    }
 })();
