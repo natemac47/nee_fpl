@@ -1,0 +1,48 @@
+<div class="time_off">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <h1 class="panel-title title-spacing reduced-title">My Time Off</h1>
+
+      <h6 class="grey-text">Vacation</h6>
+      <div style="display: flex; align-items: center;">
+        <div class="progress" style="width: 100%;">
+          <div class="progress-bar progress-bar-primary" style="background-color:#0c2739" role="progressbar" aria-valuenow="{{c.data.vacationTotals.takenPercentage}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width: (c.data.vacationTotals.takenPercentage || .1) + '%'}">
+          </div>
+          <div class="progress-bar progress-bar-success" style="background-color:#5ba33c" role="progressbar" aria-valuenow="{{c.data.vacationTotals.plannedPercentage}}" aria-valuemin="0" aria-valuemax="100" ng-style="{width: (c.data.vacationTotals.plannedPercentage || .1) + '%'}">
+          </div>
+        </div>
+        <div class="totals" style="padding-left: 10px;">
+          <span ng-bind="c.data.vacationTotals.entitlementHours"></span> hrs
+        </div>
+      </div>
+
+      <h6 class="grey-text">Floating Holidays</h6>
+      <div style="display: flex; align-items: center;">
+        <div class="progress" style="width: 100%;">
+          <div class="progress-bar progress-bar-primary" style="background-color:#0c2739" role="progressbar" aria-valuenow="{{c.data.floatTotals.takenPercentage}}" aria-valuemin="0" aria-valuemax="101" ng-style="{width: (c.data.floatTotals.takenPercentage) + '%'}">
+          </div>
+          <div class="progress-bar progress-bar-success" style="background-color:#5ba33c" role="progressbar" aria-valuenow="{{c.data.floatTotals.plannedPercentage}}" aria-valuemin="0" aria-valuemax="101" ng-style="{width: (c.data.floatTotals.plannedPercentage) + '%'}">
+          </div>
+        </div>
+        <div class="totals" style="padding-left: 10px;">
+          <span ng-bind="c.data.floatTotals.entitlementHours"></span> hrs
+        </div>
+      </div>
+
+      <div class="circle-legend">
+        <span class="circle-text">
+          <i class="fa fa-circle" style="color: #0c2739;"></i> Used
+        </span>
+        <span class="circle-text">
+          <i class="fa fa-circle" style="color: #5cb85c;"></i> Planned
+        </span>
+        <span class="circle-text">
+          <i class="fa fa-circle" style="color: #DEDEDE;"></i> Remaining
+        </span>
+      </div>
+      <div class="col-md-12">
+        <a href="{{options.url}}" target="_blank" class="url-link font-weight-bold text-uppercase bottom-left-link">{{options.urlText}}</a>
+      </div>
+    </div>
+  </div>
+</div>
